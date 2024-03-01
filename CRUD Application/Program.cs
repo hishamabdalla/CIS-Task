@@ -18,26 +18,28 @@
                 string option = Console.ReadLine();
                 Console.WriteLine("-----------------------");
 
+                CRUD crud = new College();
+
                 switch (option)
                 {
                     case "1":
                     case "add":
-                        CRUD.AddStudent();
+                        crud.AddStudent();
                         break;
 
                     case "2":
                     case "view":
-                        CRUD.ViewStudents();
+                        crud.ViewStudents();
                         break;
 
                     case "3":
                     case "update":
-                        CRUD.UpdateStudent();
+                        crud.UpdateStudent();
                         break;
 
                     case "4":
                     case "delete":
-                        CRUD.DeleteStudent();
+                        crud.DeleteStudent();
                         break;
 
                     case "5":
