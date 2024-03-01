@@ -11,10 +11,10 @@ namespace CRUD_Application
     internal abstract class CRUD
     {
        
-        public abstract void AddStudent();
-        public abstract void ViewStudents();
-        public abstract void UpdateStudent();
-        public abstract void DeleteStudent();
+        public abstract void Add();
+        public abstract void View();
+        public abstract void Update();
+        public abstract void Delete();
        
 
         protected int ReadInt(string message)

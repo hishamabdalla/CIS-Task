@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace CRUD_Application
 {
-     class College:CRUD
-     {
+    internal class CreateStudent:CRUD
+    {
         static List<Student> students = new List<Student>();
 
-        public override void AddStudent()
+        public override void Add()
         {
             Console.WriteLine("~~~~Add Student~~~~");
             Console.WriteLine("-----------------------");
@@ -18,18 +18,23 @@ namespace CRUD_Application
             Console.Write("Enter Name: ");
             string name = Console.ReadLine();
 
-            int id = ReadInt("Enter ID: ");
+            int age = ReadInt("Enter Age: ");
 
+            Console.Write("Enter Address: ");
+            string address = Console.ReadLine();
+
+            Console.Write("Enter Email: ");
+            string email = Console.ReadLine();
+
+            int StudentId = ReadInt("Enter StudentID: ");
 
             Console.Write("Enter Faculty: ");
             string faculty = Console.ReadLine();
 
-            int age = ReadInt("Enter Age: ");
-
             Console.Write("Enter Your Technology: ");
             string tech = Console.ReadLine();
 
-            Student student = new(id, name, faculty, age, tech);
+            Student student = new(StudentId, name, faculty, age, tech,address,email);
 
             students.Add(student);
             Console.Clear();
@@ -39,7 +44,7 @@ namespace CRUD_Application
             Console.WriteLine("=============================\n");
 
         }
-        public override void ViewStudents()
+        public override void View()
         {
             Console.WriteLine("~~~~View Students~~~~");
             Console.WriteLine("-----------------------");
@@ -51,19 +56,21 @@ namespace CRUD_Application
                 return;
             }
 
-            var SortedList = students.OrderBy(x => x.Id).ToList();
+            var SortedList = students.OrderBy(x => x.StudentId).ToList();
             Console.Clear();
             foreach (var student in SortedList)
             {
                 Console.WriteLine($"Name: {student.Name.ToUpper()}");
-                Console.WriteLine($"ID: {student.Id}");
-                Console.WriteLine($"Faculty: {student.Faculty.ToUpper()}");
                 Console.WriteLine($"Age: {student.Age}");
+                Console.WriteLine($"Address: {student.Address}");
+                Console.WriteLine($"Email: {student.Email}");
+                Console.WriteLine($"StudentID: {student.StudentId}");
+                Console.WriteLine($"Faculty: {student.Faculty.ToUpper()}");
                 Console.WriteLine($"Technology: {student.Technology.ToUpper()}");
                 Console.WriteLine("-------------------");
             }
         }
-        public override void UpdateStudent()
+        public override void Update()
         {
             Console.WriteLine("~~~~Update Student~~~~");
             Console.WriteLine("-----------------------");
@@ -86,7 +93,9 @@ namespace CRUD_Application
                 Console.WriteLine("3. Update Faculty");
                 Console.WriteLine("4. Update Age");
                 Console.WriteLine("5. Update Technology");
-                Console.WriteLine("6. Exit\n");
+                Console.WriteLine("6. Update Email");
+                Console.WriteLine("7. Update Address");
+                Console.WriteLine("8. Exit\n");
 
                 Console.Write("Select an Option: ");
                 string option = Console.ReadLine();
@@ -104,7 +113,7 @@ namespace CRUD_Application
                     case "2":
                         Console.Write("Enter New ID: ");
                         int id = int.Parse(Console.ReadLine());
-                        found.Id = id;
+                        found.StudentId = id;
                         break;
 
                     case "3":
@@ -124,7 +133,19 @@ namespace CRUD_Application
                         string tech = Console.ReadLine();
                         found.Technology = tech;
                         break;
+
                     case "6":
+                        Console.Write("Enter New Email: ");
+                        string Email = Console.ReadLine();
+                        found.Email = Email;
+                        break;
+
+                    case "7":
+                        Console.Write("Enter New Address: ");
+                        string Address = Console.ReadLine();
+                        found.Address = Address;
+                        break;
+                    case "8":
                         x = true;
                         break;
 
@@ -142,12 +163,9 @@ namespace CRUD_Application
             Console.WriteLine("=============================\n");
 
 
-
-
-
         }
 
-        public override void DeleteStudent()
+        public override void Delete()
         {
             Console.WriteLine("~~~~Delete Student~~~~");
             Console.WriteLine("-------------------");
@@ -172,3 +190,4 @@ namespace CRUD_Application
 
     }
 }
+
