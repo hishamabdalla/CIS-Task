@@ -1,0 +1,15 @@
+D:\Backend\CIS\TaskP4\bin\Debug\net8.0\TaskP4.exe
+D:\Backend\CIS\TaskP4\bin\Debug\net8.0\TaskP4.deps.json
+D:\Backend\CIS\TaskP4\bin\Debug\net8.0\TaskP4.runtimeconfig.json
+D:\Backend\CIS\TaskP4\bin\Debug\net8.0\TaskP4.dll
+D:\Backend\CIS\TaskP4\bin\Debug\net8.0\TaskP4.pdb
+D:\Backend\CIS\TaskP4\obj\Debug\net8.0\TaskP4.GeneratedMSBuildEditorConfig.editorconfig
+D:\Backend\CIS\TaskP4\obj\Debug\net8.0\TaskP4.AssemblyInfoInputs.cache
+D:\Backend\CIS\TaskP4\obj\Debug\net8.0\TaskP4.AssemblyInfo.cs
+D:\Backend\CIS\TaskP4\obj\Debug\net8.0\TaskP4.csproj.CoreCompileInputs.cache
+D:\Backend\CIS\TaskP4\obj\Debug\net8.0\TaskP4.sourcelink.json
+D:\Backend\CIS\TaskP4\obj\Debug\net8.0\TaskP4.dll
+D:\Backend\CIS\TaskP4\obj\Debug\net8.0\refint\TaskP4.dll
+D:\Backend\CIS\TaskP4\obj\Debug\net8.0\TaskP4.pdb
+D:\Backend\CIS\TaskP4\obj\Debug\net8.0\TaskP4.genruntimeconfig.cache
+D:\Backend\CIS\TaskP4\obj\Debug\net8.0\ref\TaskP4.dll
